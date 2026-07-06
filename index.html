@@ -112,7 +112,8 @@
     }
 
     document.getElementById("equipment").addEventListener("change", updateTotal);
-    document.getElementById("from").addEventListener("change", updateTotal);
+    document.getElementById("from").addEventListener("input", updateTotal);
+    document.getElementById("to").addEventListener("input", updateTotal)
     document.getElementById("book").addEventListener("click", createBooking);
 
     loadEquipment();
