@@ -43,6 +43,7 @@
     async function loadEquipment() {
       const res = await fetch("/api/equipment");
       equipmentList = await res.json();
+      equipmentList = equipmentList.filter(item => item["status"] === "available");
       const select = document.getElementById("equipment");
       select.innerHTML = "";
       equipmentList.forEach(item => {
